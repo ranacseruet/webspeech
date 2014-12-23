@@ -1,0 +1,26 @@
+{
+  "name": "webspeech",
+  "main": "src/webspeech.js",
+  "version": "0.0.1",
+  "authors": [
+    "Md Ali Ahsan Rana <rana_cse_ruet@yahoo.com>"
+  ],
+  "description": "A HTML5 WebSpeech API Wrapper Library",
+  "keywords": [
+    "speech",
+    "html5",
+    "api",
+    "audio"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "platform": "~1.3.0"
+  }
+}

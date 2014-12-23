@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input id="text">
+<button onclick="talk()">Talk It!</button>
+<button onclick="listen()">Voice</button>
+<script src="../bower_components/platform/platform.js"></script>
+<script src="../src/webspeech.js"></script>
+<script>
+    var speaker = new RobotSpeaker();
+    var listener = new AudioListener();
+    function talk() {
+        speaker.speak("en", document.getElementById("text").value);
+    }
+
+    function listen() {
+        listener.listen("en", function(text) {
+            document.getElementById("text").value = text;
+        });
+    }
+</script>
+</body>
+</html>
