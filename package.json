@@ -1,0 +1,35 @@
+{
+  "name": "webspeech",
+  "version": "0.0.2",
+  "description": "A HTML5 WebSpeech API Wrapper Library",
+  "main": "webspeech.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ranacseruet/webspeech.git"
+  },
+  "keywords": [
+    "speech",
+    "webspeech",
+    "html5",
+    "api",
+    "audio",
+    "synthesis"
+  ],
+  "author": "Md Ali Ahsan Rana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ranacseruet/webspeech/issues"
+  },
+  "homepage": "https://github.com/ranacseruet/webspeech",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-uglify": "^0.7.0"
+  }
+}
