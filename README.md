@@ -25,3 +25,7 @@ If you are not using bower, simply download as zip file and include to the HTML 
         document.getElementById("text").value = text;
     });
 ```
+
+## Contribution
+Being this technology relatively young, there could be several features, that have been missed in integration or bugs. Feel free to create issues on
+github with details and send pull requests. Thanks!
