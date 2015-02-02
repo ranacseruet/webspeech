@@ -1,7 +1,7 @@
 {
   "name": "webspeech",
   "main": "src/webspeech.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "Md Ali Ahsan Rana <rana_cse_ruet@yahoo.com>"
   ],
@@ -10,7 +10,9 @@
     "speech",
     "html5",
     "api",
-    "audio"
+    "audio",
+    "webspeech",
+    "sythesis"
   ],
   "license": "MIT",
   "ignore": [

@@ -3,7 +3,7 @@
  */
 
 /**
- * a robotic speaker who speaks with given text and laguage
+ * a robotic speaker who speaks with given text and language
  */
 function RobotSpeaker()
 {
@@ -85,5 +85,5 @@ function AudioListener(callback)
     this.stop = function() {
         this.listener.stop();
         console.log("audio listener stopped");
-    }
+    };
 }
