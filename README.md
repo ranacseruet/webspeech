@@ -26,6 +26,17 @@ If you are not using bower, simply download as zip file and include to the HTML 
     });
 ```
 
+## Development
+You must have to have node/npm and grunt installed on your development machine.
+Install all dev dependencies:
+```
+$npm install
+```
+Run grunt tasks and build:
+```
+$grunt
+```
+
 ## Contribution
 Being this technology relatively young, there could be several features, that have been missed in integration or bugs. Feel free to create issues on
 github with details and send pull requests. Thanks!
