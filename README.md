@@ -37,6 +37,10 @@ Run grunt tasks and build:
 $grunt
 ```
 
+## Development Considerations
+- Add Unit Tests
+- Throw errors about browser incompatibility
+
 ## Contribution
 Being this technology relatively young, there could be several features, that have been missed in integration or bugs. Feel free to create issues on
 github with details and send pull requests. Thanks!
