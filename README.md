@@ -39,7 +39,7 @@ $grunt
 
 ## Development Considerations
 - Add Unit Tests
-- Throw errors about browser incompatibility
+- Add language list so that developers doesn't need to enter language code manually
 
 ## Contribution
 Being this technology relatively young, there could be several features, that have been missed in integration or bugs. Feel free to create issues on
