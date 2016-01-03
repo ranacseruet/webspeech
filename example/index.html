@@ -8,40 +8,44 @@
 <input id="text">
 <button onclick="talk()">Talk It!</button>
 <button onclick="listen()">Voice</button>
+<select id="lang">
+	<option value="en">English</option>
+	<option value="fr">French</option>
 <br/>
 <p id="status" style="color: red"></p>
 <script src="../bower_components/platform/platform.js"></script>
-<script src="../build/webspeech.min.js"></script>
+<script src="../src/webspeech.js"></script>
 <script>
-	/*var speaker = new RobotSpeaker();
-    var listener = new AudioListener();
-	*/
-   var speaker; 
-	try{
-		speaker	= new RobotSpeaker();
-	}
-	catch(ex){
-		speaker = null;
-		document.getElementById("status").innerHTML = ex;
-	}
-    var listener; 
-	try{
-		listener = new AudioListener();
-	}
-	catch(ex){
-		listener = null;
-		document.getElementById("status").innerHTML = ex;
-	}
+    var speaker, listener;
+    window.onload = function() {
+        ws = webSpeechNoConflict();
+        try{
+            speaker	= new ws.Speaker();
+        }
+        catch(ex){
+            console.log(ex);
+            speaker = null;
+            document.getElementById("status").innerHTML = ex;
+        }
+        try{
+            listener = new ws.Listener();
+        }
+        catch(ex){
+            console.log(ex);
+            listener = null;
+            document.getElementById("status").innerHTML = ex;
+        }
+    };
 	
     function talk() {
 		if(speaker){
-			speaker.speak("en", document.getElementById("text").value);
+			speaker.speak(document.getElementById("lang").value, document.getElementById("text").value);
 		}
     }
 
     function listen() {
 		if(listener){
-			listener.listen("en", function(text) {
+			listener.listen(document.getElementById("lang").value, function(text) {
 				document.getElementById("text").value = text;
 			});
 		}
