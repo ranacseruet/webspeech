@@ -21,6 +21,9 @@
         ws = webSpeechNoConflict();
         try{
             speaker	= new ws.Speaker();
+            speaker.onEnd(function(){
+                console.log('just finished talking...');
+            });
         }
         catch(ex){
             console.log(ex);

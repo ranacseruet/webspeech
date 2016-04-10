@@ -11,8 +11,26 @@
             throw "This browser does not have support for webspeech api";
         }
         this.u.rate = 1.0;
+        var callBack = null;
+
+        this.onEnd = function(cb) {
+          callBack = cb;
+        };
+
+        this.setSpeed = function(playbackSpeed) {
+            if (playbackSpeed < 0.1 || playbackSpeed > 10) {
+                //invalid speed;
+                return false;
+            }
+            this.u.rate = playbackSpeed;
+            return true;
+        };
+
         this.u.onend = function(event) {
-            //TODO
+            //callback to handler provided
+            if (callBack && (typeof callBack === 'function')) {
+                callBack();
+            }
         };
         this.speak = function(lang, text){
             this.u.lang = lang;
